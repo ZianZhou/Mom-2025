@@ -1,0 +1,9 @@
+2025-07-27 11:41:21.073731-07:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGE" not found (this database is empty); SQL statement:
+insert into message (text,id) values (?,default) [42104-232]
+2025-07-27 11:41:44.365415-07:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGE" not found (this database is empty); SQL statement:
+insert into message (text,id) values (?,default) [42104-232]
+2025-07-27 11:42:38.980817-07:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "MESSAGE" not found (this database is empty); SQL statement:
+insert into message (text,id) values (?,default) [42104-232]

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Jar of Love 💌</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #fff6f8;
+        }
+        h1 {
+            color: #e83e8c;
+        }
+        #message {
+            font-size: 24px;
+            margin: 20px;
+            color: #333;
+        }
+        button {
+            background-color: #e83e8c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>💌 Jar of Love 💌</h1>
+    <p id="message">Click the button to receive some love 💖</p>
+    <button onclick="getMessage()">Give me a message</button>
+
+    <script>
+        async function getMessage() {
+            try {
+                const response = await fetch('/api/messages/random');
+                const data = await response.json();
+                document.getElementById('message').textContent = data.text;
+            } catch (err) {
+                document.getElementById('message').textContent = 'Oops! Something went wrong.';
+            }
+        }
+    </script>
+</body>
+</html>

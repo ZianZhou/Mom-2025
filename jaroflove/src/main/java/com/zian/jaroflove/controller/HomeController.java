@@ -20,6 +20,11 @@ public class HomeController {
         return "index"; // show random message
     }
 
+    @GetMapping("/memories")
+    public String showMemories() {
+        return "memories";
+    }
+
     @GetMapping("/add")
     public String showForm(Model model) {
         model.addAttribute("message", new Message());

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memories</title>
+  <style>
+    :root{--pink:#d94b6b;--bg1:#ffeaea;--bg2:#fff;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;
+      font-family:'Segoe UI',sans-serif;
+      display:flex;flex-direction:column;align-items:center;
+      background:linear-gradient(var(--bg1),var(--bg2));
+      color:#333;
+    }
+    h1{margin:25px 0 10px;font-size:2.3rem;color:var(--pink);}
+    /* ─── carousel box ─── */
+    .viewport{
+      width:90%;max-width:800px;height:clamp(260px,60vh,500px);
+      overflow:hidden;border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,.15);
+      margin-top:25px;
+    }
+    /* ─── strip of images ─── */
+    .slides{
+      display:flex;
+      width:480%;                        /* 20 imgs × 24 % */
+      height:100%;
+      animation:scroll 50s linear infinite;
+    }
+    .slides img{
+      width:24%;                         /* doubled width */
+      height:100%;object-fit:cover;
+    }
+    @keyframes scroll{
+      from{transform:translateX(0)}
+      to  {transform:translateX(-240%)}   /* one set of 10 imgs */
+    }
+    footer{margin:30px 0;color:#666;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <h1>🌸 美美照 🌸</h1>
+
+  <div class="viewport">
+    <div class="slides">
+      <!-- first set -->
+      <img src="/memories/photo1.jpg"  alt="">
+      <img src="/memories/photo2.jpg"  alt="">
+      <img src="/memories/photo3.jpg"  alt="">
+      <img src="/memories/photo4.jpg"  alt="">
+      <img src="/memories/photo5.jpg"  alt="">
+      <img src="/memories/photo6.jpg"  alt="">
+      <img src="/memories/photo7.jpg"  alt="">
+      <img src="/memories/photo8.jpg"  alt="">
+      <img src="/memories/photo9.jpg"  alt="">
+      <img src="/memories/photo10.jpg" alt="">
+      <!-- duplicate set for seamless loop -->
+      <img src="/memories/photo1.jpg"  alt="">
+      <img src="/memories/photo2.jpg"  alt="">
+      <img src="/memories/photo3.jpg"  alt="">
+      <img src="/memories/photo4.jpg"  alt="">
+      <img src="/memories/photo5.jpg"  alt="">
+      <img src="/memories/photo6.jpg"  alt="">
+      <img src="/memories/photo7.jpg"  alt="">
+      <img src="/memories/photo8.jpg"  alt="">
+      <img src="/memories/photo9.jpg"  alt="">
+      <img src="/memories/photo10.jpg" alt="">
+    </div>
+  </div>
+
+  <footer>用爱制造 ❤️</footer>
+</body>
+</html>
